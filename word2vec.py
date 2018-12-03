@@ -53,35 +53,35 @@ if __name__ == '__main__':
     # save only the word vectors
     model.wv.save(os.path.join(abspath, "default"))
 
-    w1 = "dirty"
+    w1 = "dairy"
     print("Most similar to {0}".format(w1), model.wv.most_similar(positive=w1))
 
-    # look up top 6 words similar to 'polite'
-    w1 = ["polite"]
+    # look up top 6 words similar to 'produce'
+    w1 = ["produce"]
     print(
         "Most similar to {0}".format(w1),
         model.wv.most_similar(
             positive=w1,
             topn=6))
 
-    # look up top 6 words similar to 'france'
-    w1 = ["france"]
+    # look up top 6 words similar to 'food'
+    w1 = ["food"]
     print(
         "Most similar to {0}".format(w1),
         model.wv.most_similar(
             positive=w1,
             topn=6))
 
-    # look up top 6 words similar to 'shocked'
-    w1 = ["shocked"]
+    # look up top 6 words similar to 'agriculture'
+    w1 = ["agriculture"]
     print(
         "Most similar to {0}".format(w1),
         model.wv.most_similar(
             positive=w1,
             topn=6))
 
-    # look up top 6 words similar to 'shocked'
-    w1 = ["beautiful"]
+    # look up top 6 words similar to 'impact'
+    w1 = ["impact"]
     print(
         "Most similar to {0}".format(w1),
         model.wv.most_similar(
