@@ -1,3 +1,4 @@
 default
 default.vectors.npy
 reviews_data.txt.gz
+reviews_data.txt

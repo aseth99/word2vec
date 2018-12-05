@@ -55,26 +55,26 @@ if __name__ == '__main__':
 
     model.save("w2v.model")
 
-    w1 = "dairy"
-    print("Most similar to {0}".format(w1), model.wv.most_similar(positive=w1))
+    # w1 = "dairy"
+    # print("Most similar to {0}".format(w1), model.wv.most_similar(positive=w1))
 
-    # look up top 6 words similar to 'produce'
-    w1 = ["produce"]
-    print(
-        "Most similar to {0}".format(w1),
-        model.wv.most_similar(
-            positive=w1,
-            topn=6))
+    # # look up top 6 words similar to 'produce'
+    # w1 = ["produce"]
+    # print(
+    #     "Most similar to {0}".format(w1),
+    #     model.wv.most_similar(
+    #         positive=w1,
+    #         topn=6))
 
-    # look up top 6 words similar to 'food'
-    w1 = ["food"]
-    print(
-        "Most similar to {0}".format(w1),
-        model.wv.most_similar(
-            positive=w1,
-            topn=6))
+    # # look up top 6 words similar to 'food'
+    # w1 = ["food"]
+    # print(
+    #     "Most similar to {0}".format(w1),
+    #     model.wv.most_similar(
+    #         positive=w1,
+    #         topn=6))
 
-    # look up top 6 words similar to 'agriculture'
+    # # look up top 6 words similar to 'agriculture'
     # w1 = ["agriculture"]
     # print(
     #     "Most similar to {0}".format(w1),
@@ -91,23 +91,23 @@ if __name__ == '__main__':
     #         topn=6))
 
     # get everything related to stuff on the bed
-    w1 = ["bed", 'sheet', 'pillow']
-    w2 = ['couch']
-    print(
-        "Most similar to {0}".format(w1),
-        model.wv.most_similar(
-            positive=w1,
-            negative=w2,
-            topn=10))
+    # w1 = ["bed", 'sheet', 'pillow']
+    # w2 = ['couch']
+    # print(
+    #     "Most similar to {0}".format(w1),
+    #     model.wv.most_similar(
+    #         positive=w1,
+    #         negative=w2,
+    #         topn=10))
 
-    # similarity between two different words
-    print("Similarity between 'dirty' and 'smelly'",
-          model.wv.similarity(w1="dirty", w2="smelly"))
+    # # similarity between two different words
+    # print("Similarity between 'dirty' and 'smelly'",
+    #       model.wv.similarity(w1="dirty", w2="smelly"))
 
-    # similarity between two identical words
-    print("Similarity between 'dirty' and 'dirty'",
-          model.wv.similarity(w1="dirty", w2="dirty"))
+    # # similarity between two identical words
+    # print("Similarity between 'dirty' and 'dirty'",
+    #       model.wv.similarity(w1="dirty", w2="dirty"))
 
-    # similarity between two unrelated words
-    print("Similarity between 'dirty' and 'clean'",
-          model.wv.similarity(w1="dirty", w2="clean"))
+    # # similarity between two unrelated words
+    # print("Similarity between 'dirty' and 'clean'",
+    #       model.wv.similarity(w1="dirty", w2="clean"))
