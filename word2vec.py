@@ -53,6 +53,8 @@ if __name__ == '__main__':
     # save only the word vectors
     model.wv.save(os.path.join(abspath, "default"))
 
+    model.save("w2v.model")
+
     w1 = "dairy"
     print("Most similar to {0}".format(w1), model.wv.most_similar(positive=w1))
 
@@ -73,20 +75,20 @@ if __name__ == '__main__':
             topn=6))
 
     # look up top 6 words similar to 'agriculture'
-    w1 = ["agriculture"]
-    print(
-        "Most similar to {0}".format(w1),
-        model.wv.most_similar(
-            positive=w1,
-            topn=6))
+    # w1 = ["agriculture"]
+    # print(
+    #     "Most similar to {0}".format(w1),
+    #     model.wv.most_similar(
+    #         positive=w1,
+    #         topn=6))
 
-    # look up top 6 words similar to 'impact'
-    w1 = ["impact"]
-    print(
-        "Most similar to {0}".format(w1),
-        model.wv.most_similar(
-            positive=w1,
-            topn=6))
+    # # look up top 6 words similar to 'impact'
+    # w1 = ["impact"]
+    # print(
+    #     "Most similar to {0}".format(w1),
+    #     model.wv.most_similar(
+    #         positive=w1,
+    #         topn=6))
 
     # get everything related to stuff on the bed
     w1 = ["bed", 'sheet', 'pillow']
